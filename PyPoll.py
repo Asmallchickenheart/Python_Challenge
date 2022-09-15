@@ -9,14 +9,18 @@ second_candidate = 0
 third_candidate = 0
 # set original value for total votes
 total_votes = 0
+# loop through the csv file to count the votes for each candidate
 for i in csv_data["Candidate"]:
     # count total votes
     total_votes += 1
     # count votes for each candidate
+    # amount of votes for first candidate
     if i == "Charles Casper Stockham":
         first_candidate += 1
+    # amount of votes for second candidate
     elif i == "Diana DeGette":
         second_candidate += 1
+    # amount of votes for third candidate
     elif i == "Raymon Anthony Doane":
         third_candidate += 1
 # calculate percentage for each candidate
@@ -31,7 +35,7 @@ elif second_candidate > first_candidate and second_candidate > third_candidate:
 elif third_candidate > first_candidate and third_candidate > second_candidate:
     winner = "Raymon Anthony Doane"
 
-
+# print the result
 print("Election Results")
 print("-------------------------")    
 print(f'Total Votes: {total_votes}')
